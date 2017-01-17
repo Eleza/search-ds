@@ -51,8 +51,8 @@ public class TestTreeSet {
     private void pre() {
         int LEN = 10;
         SortedSet<Integer> OK = new TreeSet<>();
-        ISortedSet<Integer> set = new AVLTree<>();
-//        ISortedSet<Integer> set = new RedBlackTree<>();
+        //ISortedSet<Integer> set = new AVLTree<>();
+        ISortedSet<Integer> set = new RedBlackTree<>();
         for (int value = 0; value < LEN; value++) {
             check(OK, set, value, true);
         }
@@ -139,7 +139,7 @@ public class TestTreeSet {
         if (add) {
             assert OK.add(value) == set.add(value);
         } else {
-            assert OK.remove(value) == set.remove(value);
+                assert OK.remove(value) == set.remove(value);
         }
         assert OK.size() == set.size();
         assert OK.contains(value) == set.contains(value);

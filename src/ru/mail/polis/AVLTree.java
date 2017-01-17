@@ -375,12 +375,12 @@ public class AVLTree<E extends Comparable<E>> implements ISortedSet<E> {
         tree = new AVLTree<>();
         //int[] a = {39, 23, 22, 29, 32, 48, 38, 30, 12, 22, 31, 12, 34, 0, 17};
         for (int i = 0; i < 20; i++) {
-            tree.add(rnd.nextInt(20));
+            tree.add(rnd.nextInt(50));
         }
         System.out.println(tree);
         System.out.println(true);
         for (int i = 0; i < 20; i++) {
-            tree.remove(rnd.nextInt(20));
+            tree.remove(rnd.nextInt(50));
             System.out.println(tree.check(tree.root));
             System.out.println(tree);
         }
